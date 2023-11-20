@@ -1,0 +1,13 @@
+
+<div class="div">
+    <button 
+        class="btn btn-primary"
+        (click)="onClick()" > Display details </button>
+    <p *ngIf="display">Koala Bears</p>
+    <div 
+        *ngFor="let detail of detailLog"
+        [ngStyle]="{backgroundColor: detail >= 5 ? 'blue' : 'white'}" 
+        [ngClass]="{manyClicks: detail >= 5}"
+        >Button click: {{ detail }}
+    </div>
+</div>
